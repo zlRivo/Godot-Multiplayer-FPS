@@ -1,0 +1,13 @@
+{
+    "player_ids": {
+        "zlRivo": {
+            "password": "test"
+        }
+    },
+
+    "weapons": {
+        "glock": {
+            "damage": 5
+        }
+    }
+}

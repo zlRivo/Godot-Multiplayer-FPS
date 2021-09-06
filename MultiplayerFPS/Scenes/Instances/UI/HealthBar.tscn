@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Instances/UI/HeathBarTheme.tres" type="Theme" id=1]
+
+[node name="HealthBar" type="ProgressBar"]
+margin_right = 100.0
+margin_bottom = 4.0
+theme = ExtResource( 1 )
+value = 100.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}

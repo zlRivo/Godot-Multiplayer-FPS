@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/Instances/Items/Weapons/Armed/BulletImpact.gd" type="Script" id=1]
+
+[sub_resource type="Gradient" id=8]
+colors = PoolColorArray( 0.223529, 0.223529, 0.223529, 1, 0.223529, 0.223529, 0.223529, 0 )
+
+[sub_resource type="GradientTexture" id=9]
+gradient = SubResource( 8 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+direction = Vector3( 0, 0, 0 )
+spread = 180.0
+flatness = 1.0
+gravity = Vector3( 0, 3, 0 )
+initial_velocity = 0.3
+linear_accel = -1.0
+scale = 0.05
+color_ramp = SubResource( 9 )
+
+[sub_resource type="SpatialMaterial" id=6]
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+
+[sub_resource type="SphereMesh" id=7]
+material = SubResource( 6 )
+
+[node name="AK47ImpactEffect" type="Particles"]
+emitting = false
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource( 3 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 1 )

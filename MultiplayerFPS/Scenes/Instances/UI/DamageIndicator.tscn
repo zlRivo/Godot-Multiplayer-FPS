@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Instances/UI/DamageIndicator.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/fps-fraps.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 72
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="DamageIndicator" type="Control"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Label" type="Label" parent="."]
+margin_right = 70.0
+margin_bottom = 181.0
+custom_fonts/font = SubResource( 1 )
+text = "89"
+__meta__ = {
+"_edit_use_anchors_": false
+}

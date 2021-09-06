@@ -1,0 +1,40 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+resource_name = "shoot"
+length = 0.625
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature/Skeleton:trigger")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, -5.45697e-12, 1.399e-20, 1.4916e-08, 1, 1, 1, 1, 0.0666667, 1, 2.98023e-08, 4.09782e-08, 0, -8.63162e-06, -1.05094e-07, 0.188587, 0.982057, 1, 1, 1, 0.133333, 1, 2.98023e-08, 4.09782e-08, 0, -1.07531e-05, -1.30992e-07, 0.234937, 0.972011, 1, 1, 1, 0.2, 1, 0, 1.49012e-08, -5.82077e-11, -9.43698e-06, -1.15095e-07, 0.20618, 0.978514, 1, 1, 1, 0.266667, 1, 0, 3.72529e-08, -5.82077e-11, -3.9262e-06, -4.77409e-08, 0.0857819, 0.996314, 1, 1, 1, 0.333333, 1, -1.49012e-08, 3.72529e-09, 0, -5.00222e-12, -3.63798e-12, 1.4916e-08, 1, 1, 1, 1, 0.625, 1, 0, 0, 0, -5.45697e-12, 1.399e-20, 1.4916e-08, 1, 1, 1, 1 )
+tracks/1/type = "transform"
+tracks/1/path = NodePath("Armature/Skeleton:barrels")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/keys = PoolRealArray( 0, 1, 0, 0, 0, 2.13163e-14, -1.05879e-22, -1.49011e-08, 1, 1, 1, 1, 0.625, 1, 0, 0, 0, 2.13163e-14, -1.05879e-22, -1.49011e-08, 1, 1, 1, 1 )
+tracks/2/type = "transform"
+tracks/2/path = NodePath("Armature/Skeleton:root")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/keys = PoolRealArray( 0, 1, 0, 0, 0, 7.10543e-15, -6.49596e-29, -9.14225e-15, 1, 1, 1, 1, 0.0666667, 1, 0.410421, -0.0437067, 6.65734e-09, 3.56758e-10, 1.96554e-10, -0.0363014, 0.999341, 1, 1, 1, 0.133333, 1, 0.745795, -0.0794215, -1.04589e-07, -7.39767e-09, 9.80296e-09, -0.0659302, 0.997824, 1, 1, 1, 0.2, 1, 0.701425, -0.0746964, -1.05308e-07, -7.43485e-09, 9.77992e-09, -0.0620152, 0.998075, 1, 1, 1, 0.266667, 1, 0.6009, -0.0639912, -1.06939e-07, -7.51949e-09, 9.72823e-09, -0.0531389, 0.998587, 1, 1, 1, 0.533333, 1, 0.067768, -0.00721677, -1.15587e-07, -7.97621e-09, 9.46442e-09, -0.005992, 0.999982, 1, 1, 1, 0.6, 1, 0.00883933, -0.00094132, -6.98681e-08, -4.81339e-09, 5.66352e-09, -0.000781402, 1, 1, 1, 1, 0.625, 1, 0, 0, 0, 0, 0, -9.14225e-15, 1, 1, 1, 1 )
+tracks/3/type = "method"
+tracks/3/path = NodePath("../../..")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "fire_bullet"
+} ]
+}

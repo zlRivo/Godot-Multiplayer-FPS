@@ -1,0 +1,40 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+resource_name = "shoot"
+length = 0.208333
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature/Skeleton:mag")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, -3.36312e-44, 1.77636e-15, 1, 1, 1, 1, 0.208333, 1, 0, 0, 0, 1.49012e-08, 7.10543e-15, 5.32907e-15, 1, 1, 1, 1 )
+tracks/1/type = "transform"
+tracks/1/path = NodePath("Armature/Skeleton:barrel")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/keys = PoolRealArray( 0, 1, 0, 0, 0, 1.51461e-28, 7.10543e-15, 7.10543e-15, 1, 1, 1, 1, 0.208333, 1, 0, 0, 0, 1.51461e-28, 7.10543e-15, 7.10543e-15, 1, 1, 1, 1 )
+tracks/2/type = "transform"
+tracks/2/path = NodePath("Armature/Skeleton:root")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/keys = PoolRealArray( 0, 1, 0, 0, 0, -6.01853e-36, -7.17465e-43, 7.10543e-15, 1, 1, 1, 1, 0.0666667, 1, -1.92281e-07, 0.137154, 0.806486, 0.0446863, 4.62592e-15, 7.98972e-09, 0.999001, 1, 1, 1, 0.133333, 1, -1.54893e-07, 0.110485, 0.649669, 0.0360031, 3.83275e-15, 1.33198e-08, 0.999352, 1, 1, 1, 0.208333, 1, 0, 0, 0, -6.01853e-36, -7.17465e-43, 7.10543e-15, 1, 1, 1, 1 )
+tracks/3/type = "method"
+tracks/3/path = NodePath("../../..")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "fire_bullet"
+} ]
+}

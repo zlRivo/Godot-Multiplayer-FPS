@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Instances/Gameplay/Player/DeathCamera.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/RobotoMono-Medium.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 72
+font_data = ExtResource( 2 )
+
+[node name="DeathCamera" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Camera"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 0, 0, 0.392157 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Camera"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -145.0
+margin_right = 636.0
+custom_fonts/font = SubResource( 1 )
+text = "You died !"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

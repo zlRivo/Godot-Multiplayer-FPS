@@ -1,0 +1,215 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Fonts/robotomono-medium.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scenes/Instances/UI/HUD.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Instances/UI/HealthBar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Images/Crosshair/crosshair2.png" type="Texture" id=4]
+[ext_resource path="res://Images/Crosshair/sniper_crosshair.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Instances/UI/Hitmarker.gd" type="Script" id=6]
+[ext_resource path="res://Images/Overlay/DamageOverlay/damageoverlay.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Instances/UI/DamageOverlay/DamageOverlay.gd" type="Script" id=8]
+
+[sub_resource type="Animation" id=1]
+resource_name = "fadeout"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "show"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="HUD" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.374573
+margin_top = -0.33374
+margin_right = 0.374512
+margin_bottom = -0.33374
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Crosshair" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -8.0
+margin_top = -8.0
+margin_right = 8.0
+margin_bottom = 8.0
+texture = ExtResource( 4 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hitmarker" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 6.10352e-05
+margin_top = -23.0
+margin_right = 16.0001
+margin_bottom = -6.99997
+rect_rotation = 45.0
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 4 )
+stretch_mode = 4
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hitmarker"]
+anims/fadeout = SubResource( 1 )
+
+[node name="SniperCrosshair" type="TextureRect" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -264.0
+margin_top = -264.0
+margin_right = 256.0
+margin_bottom = 256.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InteractionPrompt" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -23.5717
+margin_top = 13.7322
+margin_right = 16.4284
+margin_bottom = 53.7322
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hotkey" type="ColorRect" parent="InteractionPrompt"]
+margin_right = 16.0
+margin_bottom = 16.0
+color = Color( 0.211765, 0.211765, 0.211765, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelHotkey" type="Label" parent="InteractionPrompt/Hotkey"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "E"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelMessage" type="Label" parent="InteractionPrompt"]
+margin_left = 22.981
+margin_top = 1.06066
+margin_right = 72.981
+margin_bottom = 15.0607
+text = "Interact"
+
+[node name="DamageIndicators" type="Node" parent="."]
+
+[node name="DamageOverlay" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+expand = true
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DamageOverlay"]
+anims/show = SubResource( 2 )
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -81.0
+margin_right = 314.0
+color = Color( 0, 0, 0, 0.392157 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthUI" type="Label" parent="Background"]
+margin_left = 111.377
+margin_top = 17.9337
+margin_right = 185.377
+margin_bottom = 31.9337
+text = "Health: 100"
+
+[node name="WeaponUI" type="Label" parent="Background"]
+margin_left = 110.98
+margin_top = 39.6427
+margin_right = 183.98
+margin_bottom = 53.6427
+text = "Pistol: 5/70"
+
+[node name="HealthBar" parent="Background" instance=ExtResource( 3 )]
+margin_left = 112.0
+margin_top = 62.0
+margin_right = 293.0
+margin_bottom = 66.0
+
+[node name="Display" type="ColorRect" parent="Background"]
+margin_right = 81.0
+margin_bottom = 81.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WeaponImage" type="TextureRect" parent="Background/Display"]
+margin_right = 81.0
+margin_bottom = 81.0
+expand = true
+stretch_mode = 7
+
+[node name="WeaponSlot" type="Label" parent="Background/Display"]
+margin_left = 3.55848
+margin_top = -0.187317
+margin_right = 13.5585
+margin_bottom = 21.8127
+custom_fonts/font = ExtResource( 1 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}

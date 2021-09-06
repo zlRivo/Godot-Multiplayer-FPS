@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/Instances/Items/Weapons/Armed/BulletImpact.gd" type="Script" id=1]
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 2.0
+initial_velocity_random = 0.1
+linear_accel = -2.0
+scale = 0.01
+scale_random = 0.05
+color_ramp = SubResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=4]
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+
+[sub_resource type="SphereMesh" id=5]
+material = SubResource( 4 )
+
+[node name="BullpupSniperImpactEffect" type="Particles"]
+emitting = false
+amount = 16
+lifetime = 0.7
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource( 3 )
+draw_pass_1 = SubResource( 5 )
+script = ExtResource( 1 )
+duration = 0.7

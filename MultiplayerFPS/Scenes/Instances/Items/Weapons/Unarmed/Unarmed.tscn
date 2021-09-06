@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Instances/Items/Weapons/Unarmed/Unarmed.gd" type="Script" id=1]
+
+[node name="Unarmed" type="Spatial" groups=[
+"UNARMED",
+]]
+script = ExtResource( 1 )
+weapon_name = "UNARMED"

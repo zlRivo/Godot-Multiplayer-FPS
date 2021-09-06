@@ -1,0 +1,26 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+resource_name = "Idle"
+length = 0.001
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature/Skeleton:trigger")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, -5.45697e-12, 1.399e-20, 1.4916e-08, 1, 1, 1, 1 )
+tracks/1/type = "transform"
+tracks/1/path = NodePath("Armature/Skeleton:barrels")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/keys = PoolRealArray( 0, 1, 0, 0, 0, 2.13163e-14, -1.05879e-22, -1.49011e-08, 1, 1, 1, 1 )
+tracks/2/type = "transform"
+tracks/2/path = NodePath("Armature/Skeleton:root")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, -9.14225e-15, 1, 1, 1, 1 )

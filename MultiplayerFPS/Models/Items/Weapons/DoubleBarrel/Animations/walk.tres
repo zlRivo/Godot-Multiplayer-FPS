@@ -1,0 +1,27 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+resource_name = "Walk"
+length = 0.833333
+loop = true
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature/Skeleton:trigger")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, -5.45697e-12, 1.399e-20, 1.4916e-08, 1, 1, 1, 1, 0.833333, 1, 0, 0, 0, -5.45697e-12, 1.399e-20, 1.4916e-08, 1, 1, 1, 1 )
+tracks/1/type = "transform"
+tracks/1/path = NodePath("Armature/Skeleton:barrels")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/keys = PoolRealArray( 0, 1, 0, 0, 0, 2.13163e-14, -1.05879e-22, -1.49011e-08, 1, 1, 1, 1, 0.833333, 1, 0, 0, 0, 2.13163e-14, -1.05879e-22, -1.49011e-08, 1, 1, 1, 1 )
+tracks/2/type = "transform"
+tracks/2/path = NodePath("Armature/Skeleton:root")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, -9.14225e-15, 1, 1, 1, 1, 0.0666667, 1, -0.0127817, -0.0318776, -6.54568e-10, 0, 0, -9.14225e-15, 1, 1, 1, 1, 0.133333, 1, -0.042235, -0.105335, -2.16292e-09, -7.10543e-15, -7.10543e-15, -9.14225e-15, 1, 1, 1, 1, 0.333333, 1, -0.155603, -0.388075, -7.96865e-09, 0, 0, -9.14225e-15, 1, 1, 1, 1, 0.4, 1, -0.171719, -0.428269, -2.88951e-08, 0, 0, -9.14225e-15, 1, 1, 1, 1, 0.466667, 1, -0.166161, -0.414409, -4.20113e-08, 0, 0, -9.14225e-15, 1, 1, 1, 1, 0.533333, 1, -0.140042, -0.349268, -4.06737e-08, 0, 0, -9.14225e-15, 1, 1, 1, 1, 0.733333, 1, -0.0258411, -0.0644482, -3.48252e-08, 0, 0, -9.14225e-15, 1, 1, 1, 1, 0.8, 1, -0.00389007, -0.00970192, -2.70007e-08, 1.05879e-22, -7.10543e-15, 1.49012e-08, 1, 1, 1, 1, 0.833333, 1, 0, 0, 0, 0, 0, -9.14225e-15, 1, 1, 1, 1 )
