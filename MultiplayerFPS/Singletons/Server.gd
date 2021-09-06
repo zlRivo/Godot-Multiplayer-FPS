@@ -10,6 +10,7 @@ func _ready():
 	ConnectToServer()
 	
 func ConnectToServer():
+	network = NetworkedMultiplayerENet.new()
 	network.create_client(ip, port)
 	get_tree().set_network_peer(network)
 	

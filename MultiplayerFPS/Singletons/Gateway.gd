@@ -49,13 +49,14 @@ func RequestLogin():
 
 remote func ReturnLoginRequest(result):
 	print("Received login result")
+	
 	if result:
-		Server.ConnectToServer()
-		get_node("../SceneHandler/LoginScreen").queue_free()
 		get_node("../SceneHandler").CreateWorld()
+		Server.ConnectToServer()
 	else:
 		print("Please provide correct username and password.")
 		get_node("../SceneHandler/LoginScreen").login_button.disabled = false
 	
+	# Disconnect signals
 	network.disconnect("connection_failed", self, "_on_connection_failed")
-	network.disconnect("connection_succeeded", self, "_on_connection_succeeded")
+	network.disconnect("connection_succeeded", self, "_on_connection_succeeded")	

@@ -6,7 +6,7 @@ onready var login_button = $BackGround/VBoxContainer/HBoxContainer/ButtonConnect
 
 func _on_ButtonConnect_pressed():
 	var username = username_input.text.strip_edges()
-	var password = username_input.text
+	var password = password_input.text
 	
 	if username == "" or password == "":
 		print("Please provide a valid UserID and password")
