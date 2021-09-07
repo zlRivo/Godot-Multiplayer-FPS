@@ -4,6 +4,8 @@ var network = NetworkedMultiplayerENet.new()
 var port = 1909
 var max_players = 100
 
+onready var player_verification_process = get_node("PlayerVerification")
+
 func _ready():
 	StartServer()
 	
@@ -17,6 +19,7 @@ func StartServer():
 
 func _peer_connected(player_id):
 	print("User " + str(player_id) + " connected !")
+	player_verification_process.start(player_id)
 	
 func _peer_disconnected(player_id):
 	print("User " + str(player_id) + " disconnected !")

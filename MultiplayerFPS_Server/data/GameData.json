@@ -1,5 +1,13 @@
 {
-    "Glock": {
-        "damage": 5
+    "weapons": {
+        "glock": {
+            "damage": 27
+        }
+    },
+
+    "player_stats": {
+        "zlRivo": {
+            "level": 1
+        }
     }
 }
