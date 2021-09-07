@@ -13,6 +13,7 @@ func _ready():
 func CreateWorld():
 	var world = game_world_scene.instance()
 	DeleteLoginScreen()
+		
 	add_child(world)
 
 func DeleteLoginScreen():
